@@ -17,7 +17,9 @@ public class Print3Words {
 
     public static void main(String[] args) {
 
+        // input prompt
         System.out.print("Enter three words: ");
+
         Scanner keyboard = new Scanner(System.in);
         // read the input three words
         if(keyboard.hasNext()) {
@@ -30,11 +32,11 @@ public class Print3Words {
             String new_w2 = w2.toLowerCase();
             String new_w3 = w3.substring(0,2); // end index NOT included
 
-            // output
+            // print prompt
             String s1 = "Word one as upper case: ";
             String s2 = "Second word as lower case: ";
             String s3 = "First two characters of word three: ";
-            System.out.println(); // extra empty line
+            System.out.println(); // an extra empty line
             System.out.println(s1 + new_w1);
             System.out.println(s2 + new_w2);
             System.out.println(s3 + new_w3);

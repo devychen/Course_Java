@@ -45,7 +45,8 @@ public class LoveHate
 			print the changed sentence to System.out.
 		*/
 
-
+        sentence = sentence.replace("hate", "love");
+        System.out.println(sentence);
 
 
     }
