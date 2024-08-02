@@ -1,0 +1,46 @@
+boolean lastWasVowel = false;
+boolean thisIsVowel = false;
+int sc = 0;
+
+// empty word has no syllables
+if (aWord.length() == 0) {
+	return 0;
+}
+
+for (int i = 0; i < aWord.length(); i++) {
+	// Determine if this char is a vowel
+	switch (aWord.charAt(i)) {
+		case 'a':
+		case 'e':
+		case 'i':
+		case 'o':
+		case 'u':
+		case 'y':
+			thisIsVowel = true;
+			break;
+		default:
+			thisIsVowel = false;
+		}
+
+	// only increment syllableCnt if 
+	// previous char was NOT a vowel
+	if (thisIsVowel && !lastWasVowel) {
+		sc++;
+	}
+
+	// update lastWasVowel for the next iteration
+	lastWasVowel = thisIsVowel;
+}
+
+// a trailing 'e' would have been counted as a
+// syllable when it shouldn't have been
+if (aWord.endsWith("e")) {
+	sc--;
+}
+
+// all words have at least 1 syllable
+if (sc <= 0) {
+	sc = 1;
+}
+
+return sc;
