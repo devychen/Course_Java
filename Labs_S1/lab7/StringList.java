@@ -84,31 +84,31 @@ public class StringList {
      */
     public void insertAt(int index, String item){
 
-        if (index >= 0 && index < numElements) {
-            // update size
-            // 如果现在元素数已经等于长度，那加一个元素必然会溢出
-            if (numElements == list.length) {
-                String[] tmp = new String[numElements + INITIAL_SIZE];
-
-                for (int i = 0; i < numElements; i++) {
-                    tmp[i] = list[i];
-                }
-                list = tmp;
-            }
-
-            // shift list elements to make room for the new item
-            // start from the last element
-            for (int i = numElements; i > index; i--) {
-                list[i] = list[i - 1];
-            }
-
-            list[index] = item;
-            numElements++;
-        } else {
-            System.out.println("Index out of bounds.");
+        // handle exception
+        if ((index < 0) || (index > numElements)) {
+            throw new IndexOutOfBoundsException();
         }
 
+        // create new list to store results
+        String[] result = new String[numElements + 1];
+
+        // Elements before index stays where they are
+        for (int i = 0; i < index; i++) {
+            result[i] = list[i];
+        }
+
+        // elements after index move one position to right
+        for (int j = index; j < numElements; j++) {
+            result[j + 1] = list[j];
+        }
+
+        // insert new item at index
+        result[index] = item;
+
+        list = result;
+        numElements++;
     }
+
 
     /*
     Remove String `item` from the list.
@@ -116,26 +116,38 @@ public class StringList {
      */
     public boolean remove(String item){
 
-        // Remove String item from the list.
-        // Returns true when item was successfully removed and false otherwise.
+        boolean found = false;
         int index = -1;
-        for (int i = 0; i < numElements; i++){
-            if (list[i].equalsIgnoreCase(item)){
-                index = 1;
+
+        // loop to find the element
+        for (int i = 0; i < numElements; i++) {
+            if (list[i].equalsIgnoreCase(item)) {
+                index = i;
                 break;
             }
         }
-        if (index != -1){
-            // shift elements to fill the gap left by the removed item
-            for (int i = index; i < numElements - 1; i++){
-                list[i] = list[i + 1];
+
+        if (found){
+            // new list to store result
+            String[] result = new String[numElements - 1];
+
+            // left to index, remains the same
+            for (int j = 0; j < index; j++) {
+                result[j] = list[j];
             }
-            // set the last element to null and decrement the count
-            list[numElements - 1] = null;
+
+            // right to index, move one position to the left
+            for (int j = index + 1; j < numElements; j++) {
+                result[j - 1] = list[j];
+            }
+
+            list = result;
+
             numElements--;
-            return true;
+
+            found = true;
         }
-        return false;
+        return found;
     }
 
     /*
@@ -143,12 +155,32 @@ public class StringList {
     (Copy every non-null element in list into an array)
      */
     public String[] toArray(){
-        // Returns the content as an array of Strings.
-        // (Copy every non-null element in list into an array)
+
         String[] result = new String[numElements];
-        for (int i = 0; i < numElements; i++) {
-            result[i] = list[i];
+
+        for (int i = 0; i < numElements; i++){
+            if(list[i] != null){
+                result[i] = list[i];
+            }
         }
+
+        return result;
+    }
+
+    /**
+     * Return the content as a String representation without null elements.
+     */
+    public String toString(){
+
+        String result = "[";
+
+        for (int i = 0; i < numElements; i++) {
+            result += list[i] + ", ";
+        }
+
+        result = result.substring(0, result.length() - 2);
+        result += "]";
+
         return result;
     }
 

@@ -33,22 +33,14 @@ public class StringListTest {
      * Test the StringList without modifications.
      */
     @Test
-    public void test1() {
+    public void testToString() {
         String expected = "[Hallo, schoene, Welt]";
         String res = testList.toString();
         assertEquals(expected,res);
     }
 
     @Test
-    public void test2() {
-        String[] expected = {"Hallo", "schoene", "bunte", "Welt"};
-        testList.insertAt(2,"bunte");
-        String[] res = StringList.list;
-        assertTrue(Arrays.equals(expected, res));
-    }
-
-    @Test
-    public void test3() {
+    public void testRemove1() {
         String[] expected = {"Hallo","Welt"};
         boolean res2 = testList.remove("schoene");
         assertTrue(res2);
@@ -57,16 +49,7 @@ public class StringListTest {
     }
 
     @Test
-    public void test4() {
-        String[] expected = {"Hallo","schoene" ,"Welt"};
-        boolean res2 = testList.remove("blubber");
-        assertFalse(res2);
-        String[] res = StringList.list;
-        assertTrue(Arrays.equals(expected, res));
-    }
-
-    @Test
-    public void test5() {
+    public void testRemove2() {
         String[] expected = {"schoene" ,"Welt"};
         boolean res2 = testList.remove("Hallo");
         assertTrue(res2);
@@ -75,7 +58,7 @@ public class StringListTest {
     }
 
     @Test
-    public void test6() {
+    public void testRemove3() {
         String[] expected = {"Hallo", "schoene"};
         boolean res2 = testList.remove("Welt");
         assertTrue(res2);
@@ -84,7 +67,24 @@ public class StringListTest {
     }
 
     @Test
-    public void test7() {
+    public void testRemoveNull() {
+        String[] expected = {"Hallo","schoene" ,"Welt"};
+        boolean res2 = testList.remove("blubber");
+        assertFalse(res2);
+        String[] res = StringList.list;
+        assertTrue(Arrays.equals(expected, res));
+    }
+
+    @Test
+    public void testInsertAt1() {
+        String[] expected = {"Hallo", "schoene", "bunte", "Welt"};
+        testList.insertAt(2,"bunte");
+        String[] res = StringList.list;
+        assertTrue(Arrays.equals(expected, res));
+    }
+
+    @Test
+    public void testInsertAt2() {
         String[] expected = {"Oh", "Hallo", "schoene", "Welt"};
         testList.insertAt(0,"Oh");
         String[] res = StringList.list;
@@ -92,7 +92,7 @@ public class StringListTest {
     }
 
     @Test
-    public void test8() {
+    public void testInsertAt3() {
         String[] expected = {"Hallo","schoene", "Welt", "Oh"};
         testList.insertAt(3,"Oh");
         String[] res = StringList.list;
@@ -100,7 +100,7 @@ public class StringListTest {
     }
 
     @Test
-    public void test9()  {
+    public void testInsertAt4()  {
         String[] expected = {"Hallo", "schoene", "Welt"};
         String[] res = testList.toArray();
         assertArrayEquals(expected,res);
