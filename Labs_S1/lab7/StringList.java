@@ -127,7 +127,7 @@ public class StringList {
             }
         }
 
-        if (found){
+        if (index != -1){
             // new list to store result
             String[] result = new String[numElements - 1];
 
