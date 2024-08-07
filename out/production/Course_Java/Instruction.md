@@ -1,105 +1,13 @@
-<h2>Exercise 1</h2>
+## Exercise 1
 
-Please write a class <tt>Word.java</tt> that encapsules a word and provides methods
-to get the word, the stem of the word, and the number of syllables in the word. You will find a template for
-your implementation in <tt><a href="Word.java">Word.java</a></tt>.
+Write a class `Patient` that extends `Person`. You will need to create the `Patient.java`. Don't forget to add it to your Git repo.
 
-<p>
-To test your code you may use <tt><a href="WordTest.java">WordTest.java</a></tt>
-</p>
+The Patient class should add a feature 'social security number' to Person. The 'social security number' must have a format ddd-dd-dddd where each 'd' stands for a digit. (You don't have to check for the format.)
 
-<h3>Methods of the <tt>Word</tt> class</h3>
-<p>Your <tt>Word</tt> class must implement the following methods:</p>
-<ul>
-<li>
-   <p>
-   <p><code><strong>public</strong> Word()</code></p> 
-    A default constructor that initializes the instance with an empty word.   
-   </p>
-</li>
-<li>
-   <p> 
-      <p><code><strong>public</strong> Word(String aWord)</code></p> 
-       A constructor that initializes the instance with String<code> aWord</code>.
-   </p>    
-</li>
-<li>
-	<code><strong>public</strong> void setWord(String newWord)</code>
-	<p>
-		Sets <tt>Word</tt> to <code><strong>String</strong> newWord</code>. 
-		<p>
-		<strong>Note:</strong> Whenever you change the word to a new value, you must 
-		also recompute the stem and the syllable count of the <code>Word</code> instance.
-		</p>
-	</p>
-</li>
-<li>
-	<code><strong>public</strong> String getWord()</code>
-	<p>Returns the word.</p>
-</li>
-<li>
-	<code><strong>public</strong> String getStem()</code>
-	<p>Returns the stem of this <code>Word</code>.</p>     
-</li>
-<li>
-	<code><strong>public</strong> int getSyllableCnt()</code>
-	<p>Returns the number of syllables in this <code>Word</code>.</p>
-</li>
-<!--
-<li>
-	<code><strong>public</strong> String toString()</code>
-	<p>Returns a <code>String</code> representation of this <code>Word</code>.</p>
-</li>
--->
+Please implement all methods in the documentation. Once again, you can find the documentation in the Doc file of your repo. The file name is Patient.html (Open from your local file in your browser). Be sure to read the entire documentation before you start to make your program sketch. It is important that you use the correct method names and the correct parameters to every method.
 
-<!--
-<li>
-	<code><strong>private</strong> void setSyllableCnt()</code>
-	<p>Sets the number of syllables in this word.</p>
-</li>
-<li>
-	<code><strong>private</strong> void setStem()</code>
-	<p>Sets the stem of this <code>Word</code>.</p>
-</li>
--->
-</ul>
+Hint: Don't forget to use `super`. Consult the slides if you're not sure when to use super.
 
-<p>
-Depending on your algorithm, it might be useful to define helper methods that 
-create the syllable count and the stem of the word.   
-</p>
-<ul>
-<li>
-	<code><strong>private</strong> int createSyllableCnt(String aWord)</code>
-	<p>
-		Computes the number of syllables in this <code>Word</code> and return the number 
-		to the caller.
-	</p>
-	<p>Those who don't
-		find an own solution can use the code in 
-		<tt><a href="SyllableCount.txt">SyllableCount.txt</a></tt>
-If you want to use your own solution, it should give the same result as this one: A syllable is one or more consonants followed by one or more vowels(a, e, i, o, u, y). If the word ends in "e", the last consonant(s) + e do not count as a syllable.
-	</p>
-</li>
-<li>
-	<code><strong>private</strong> String createStem(String aWord)</code>
-	<p>Creates the stem for this <code>Word</code> and returns a String
-		with the stem. 
-	</p>
-	<p>
-		You can use the same algorithm you have used in our lab session. Those who don't
-		find their solution can use the code in 
-		<tt><a href="CreateStem.txt">CreateStem.txt</a></tt>
-	</p>
-</li>
-</ul>
+We recomend writing tests, but they will not be graded this time.
 
-
-
-<p>
-	When you write the class, it is recommend that you compile your class after 
-	<strong>every</strong> new method definition. Make sure that your class
-	compiles properly before you write the next method. Do not go on and write new
-	methods before the method you are currently working on is correct. 
-</p>
-<p><b>(10 points)</b></p>
+(10 points)

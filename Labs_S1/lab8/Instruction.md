@@ -2,8 +2,6 @@
 
 <b> Main contents: Chapter7, Savitch </b>
 
-The deadline for submitting the lab is <b>Friday, Dec 15th 14.00 CET</b>.
-
 <h2>Exercise 1</h2>
 
 <p>
