@@ -14,6 +14,7 @@
  *  Based on: Self-Test Question #13 in Chapter 4 (pp. 289-90).
  */
 
+package lab5;
 
 import java.util.*;
 
