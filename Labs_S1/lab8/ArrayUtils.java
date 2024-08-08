@@ -27,13 +27,38 @@ public class ArrayUtils {
 
         Object[] result = new Object[anArray.length];
 
-        if(anArray != null && anArray.length > 0){
+        if(anArray != null){
             for(int i = 0; i < anArray.length; i++){
                 result[i] = anArray[anArray.length - (i + 1)];
             }
         }
         return result;
     }
+    // 编译器要求 Java 方法必须在所有路径上都能够返回值
+    /**
+     * if (anArray != null) {
+     *     Object[] result = new Object[anArray.length];
+     *     for (int i = 0; i < anArray.length; i++) {
+     *         result[i] = anArray[anArray.length - (i + 1)];
+     *     }
+     *     return result;
+     * }
+     * return null;
+     * ----这两种也可以----
+     * if (anArray == null) {
+     *     return null;
+     * } else {
+     *     Object[] result = new Object[anArray.length];
+     *     for (int i = 0; i < anArray.length; i++) {
+     *         result[i] = anArray[anArray.length - (i + 1)];
+     *     }
+     *     return result;
+     *     //在 if-else 结构中，如果所有的逻辑分支都能保证有一个 return 语句，
+     *     //  那么编译器就不会要求在 if-else 块之外再加一个 return 语句。
+     *     //  而在没有 else 的情况下，如果你在 if 块内返回值，而 if 块外没有明确的返回值，
+     *     //  编译器会要求你在 if 块之外提供一个 return 语句。
+     * }
+     */
 
     /**
      * Returns an array with the concatenation of array1 and array2
@@ -58,8 +83,8 @@ public class ArrayUtils {
 
         // new list object created
         // length, conditional operator, `result = condition ? value_if_true : value_if_false;`
-        int len = (array1 != null ? array1.length : 0) + (array2 != null ? array2.length : 0);
-        Object[] result = new Object[len];
+//        int len = (array1 != null ? array1.length : 0) + (array2 != null ? array2.length : 0);
+        Object[] result = new Object[array1.length + array2.length];
 
         if (array1 != null && array2 != null){
 
@@ -88,9 +113,12 @@ public class ArrayUtils {
         if(anArray == null){
             index = -1;
         }
-        for(int i = 0; i < anArray.length; i++){
-            if(anArray[i] == aObject){
-                index = i;
+
+        if(anArray != null) {
+            for (int i = 0; i < anArray.length; i++) {
+                if (anArray[i] == aObject) {
+                    index = i;
+                }
             }
         }
         return index;
