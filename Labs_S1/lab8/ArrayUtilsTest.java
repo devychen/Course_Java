@@ -36,14 +36,19 @@ public class ArrayUtilsTest {
      */
     @Test
     public void testReverseArray1() {
+//        String[] a1 = null;
+//        String[] expected = null;
+//        Object[] res = ArrayUtils.reverseArray(a1);
+//
+//        for (int i = 0; i < 1; i++) {
+//            assertEquals(res[i],expected[i]);
+//        }
         String[] a1 = null;
         String[] expected = null;
         Object[] res = ArrayUtils.reverseArray(a1);
 
-        assertTrue(expected.length == res.length);
-
-        for (int i = 0; i < res.length; i++) {
-            assertEquals(res[i],expected[i]);
+        for (int i = 0; i < 1; i++) {
+            assertTrue(expected == res);
         }
 
     }
@@ -55,13 +60,11 @@ public class ArrayUtilsTest {
     public void testConcatArray1() {
         String[] a1 = null;
         String[] a2 = null;
-        String[] expected = null;                                       // expected result
-        Object[] res = ArrayUtils.concatArrays(a1, a2);   // actual result
+        String[] expected = null;
+        Object[] res = ArrayUtils.concatArrays(a1, a2);
 
-        assertTrue(expected.length == res.length);
-
-        for (int i = 0; i < res.length; i++) {
-            assertEquals(res[i],expected[i]);
+        for (int i = 0; i < 1; i++) {
+            assertTrue(expected == res);
         }
     }
 

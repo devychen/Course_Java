@@ -14,6 +14,11 @@
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab11" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab8" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab9" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab10_Exception" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab8_Method" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab9_Inheritance" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/dsa1_solutions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S2/dsa2_solutions" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
