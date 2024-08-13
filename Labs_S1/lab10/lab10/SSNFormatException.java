@@ -12,4 +12,10 @@ package lab10;
  */
 
 public class SSNFormatException extends Exception{
+    public SSNFormatException(){
+        super("Invalid SSN format");
+    }
+    public SSNFormatException(String message){
+        super(message);
+    }
 }
