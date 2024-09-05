@@ -40,7 +40,7 @@ The first test looks like this:
 
 Since a new Purse object has no coins, we expect the getTotal to return 0.  The test creates a new Purse object and asserts that the value returned by the getTotal method is 0, with an error margin of EPSILON. Since we are comparing doubles we need to allow for some error in the fractional part, but the values should always be within 1 cent (0.01) of each other.  If the getTotal method really does return 0, the test will continue by adding 1 1-cent coin to the Purse. If getTotal now returns 0.01 (i.e. one cent) the test continues by adding 100 1-cent coins. Now the total value should be 1.01.  If any of the assertions are false, the test will fail - which means there is something wrong with the getTotal method that needs to be fixed.
 
-### Ok, enough reading!  
+### ! - - - Ok, enough reading - - - !  
 ### Let's get started.
 
 Compile both Purse.java and PurseTest.java and run the tests by clicking the "Test" button.  All tests fail, but that's not surprising because our method bodies have not been implemented yet.
@@ -60,19 +60,32 @@ There is no test for the toString method, but implement it anyway. If a Purse co
 Congratulations!  All the tests passed!
 
 Write a small demo program called PurseDemo that creates 2 purses and adds coins to them:
-create 2 Purse objects
-add coins of various denominations to each purse
-print both with System.out.println(NameOfYourPurseObject);
-add more coins and print again
+- create 2 Purse objects
+- add coins of various denominations to each purse
+- print both with `System.out.println(NameOfYourPurseObject);`
+- add more coins and print again 
+
 Compile and run your program - make sure the output looks reasonable.
 
 Trick for formatting doubles:
-String.format("%.2f", doubleVar); // creates a String from doubleVar, with 2 digits after the decimal point
-
+```java
+String.format("%.2f", doubleVar); 
+// creates a String from doubleVar, with 2 digits after the decimal point
+```
 Try it out in the interactions pane (notice that it rounds, rather than truncates):
-String.format("%.2f", 5.929)
-String.format("%.2f", 5.999)
-String.format("%.4f", 5.98765)
-
+```java
+String.format("%.2f", 5.929);
+String.format("%.2f", 5.999);
+String.format("%.4f", 5.98765);
+```
 ## Exercise (part III):
-If time permits, add methods to remove coins from the purse, and tests for the new methods.  What will you do if the number of coins to be removed is greater than the number of coins in the purse? We will learn a good way to deal with such problems later.  For now, just ignore the request and do nothing in this case. Note: calling System.out.exit(0) will make it impossible to write Junit tests, so don't do that...
+If time permits, add methods to remove coins from the purse, 
+and tests for the new methods.  
+
+What will you do if the number of coins to be removed 
+is greater than the number of coins in the purse? 
+We will learn a good way to deal with such problems later.  
+For now, just ignore the request and do nothing in this case. 
+
+Note: calling System.out.exit(0) will make it impossible to 
+write Junit tests, so don't do that...

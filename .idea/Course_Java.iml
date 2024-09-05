@@ -19,6 +19,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab9_Inheritance" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/st1_scanner" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/st2_loop" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/st3_JTest" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
