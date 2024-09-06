@@ -1,3 +1,5 @@
+package st4;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 
@@ -183,6 +185,35 @@ public class ConcertTest
     @Test
     public void testGetTotalSales2()
     {
-        fail("testGetTotalSales2 has not been implemented!");
+        Concert concert = new Concert();
+        int capacity = 500;
+        double ticketPrice1 = 32.50;
+        double ticketPrice2 = 27.00;
+        int numToSell1 = 4;
+        int numToSell2 = 2;
+        double actualSales;
+        double expectedSales = (numToSell1 * ticketPrice1) +
+                (numToSell2 * ticketPrice2);
+
+        // set the seating capacity
+        concert.setNumSeats(capacity);
+
+        // set the ticket price
+        concert.setTicketPrice(ticketPrice1);
+
+        // sell some tickets
+        concert.sellTickets(numToSell1);
+
+        // set the ticket price
+        concert.setTicketPrice(ticketPrice2);
+
+        // sell some tickets
+        concert.sellTickets(numToSell2);
+
+        // get the total sales
+        actualSales = concert.getTotalSales();
+
+        // should be the same
+        assertEquals(expectedSales, actualSales, EPSILON);
     }
 }

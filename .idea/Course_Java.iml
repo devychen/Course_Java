@@ -20,6 +20,7 @@
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/st1_scanner" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/st2_loop" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/st3_JTest" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/st4_methods" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
