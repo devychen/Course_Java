@@ -17,11 +17,15 @@
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab10_Exception" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab8_Method" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab9_Inheritance" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/st1_scanner" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/st2_loop" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/st3_JTest" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/st4_methods" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/st5_methods" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/1_scanner" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/2_loop" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/3_JTest" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/4_methods" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/5_methods" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/6_arrays" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/7_multidiarrays" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/8_arrays" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/9_inheritance" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
