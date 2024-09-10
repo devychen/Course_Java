@@ -24,8 +24,11 @@
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/5_methods" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/6_arrays" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/7_multidiarrays" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/10_exception" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/11_IO" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/8_arrays" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/9_inheritance" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/MockPaper" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
