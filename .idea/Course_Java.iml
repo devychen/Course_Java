@@ -10,12 +10,9 @@
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab5" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab6" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab7" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab10" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab11" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab8" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab9" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab10_Exception" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab8_Method" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab9_Inheritance" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab9_Inheritance" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/1_scanner" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/2_loop" isTestSource="false" />
@@ -31,6 +28,14 @@
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/MockPaper" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab1/lab1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab1_ArrayList/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S2/1_ArrayList" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S2/2_LinkedList" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S2/3_StacknQueues" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SlideExamples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab10_Inheritance" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab11_Exception" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab8_Array" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
