@@ -1,7 +1,12 @@
 package dsa2_st2;
+
 /**
- A class to store and manipulate generic circularly linked lists
+ * Description: A class to store and manipulate generic circularly linked lists
+ *
+ * @author mkz
+ * TASK: Complete the missing methods
  */
+
 public class CircularlyLinkedList<T> {
     
     private ListNode cur;
@@ -12,9 +17,10 @@ public class CircularlyLinkedList<T> {
      *  Default constructor.  Creates an empty list
      */
     public CircularlyLinkedList() {
-        
         // todo
-        
+        cur = null;
+        prev = null;
+        size = 0;
     }
     
     /**
@@ -29,9 +35,15 @@ public class CircularlyLinkedList<T> {
      *  Removes all of the elements from this list.
      */
     public void clear() {
-        
         // todo
-        
+        cur = prev = null;
+        size = 0;
+        /*
+        NOTE: 将 cur 和 prev 都设置为 null，实际上就是把链表的引用断开了。
+         原来的节点没有任何引用指向它们，这些节点会被垃圾回收机制回收
+         （因为 Java 的垃圾回收机制会自动清理没有被引用的对象）。
+         这就意味着链表不再引用任何节点，等同于把整个链表清空。
+         */
     }
     
     /**
@@ -42,14 +54,23 @@ public class CircularlyLinkedList<T> {
     public void add(T newData) {
         
        // todo
-        
+        ListNode newNode = new ListNode(newData, null);
+
         if (cur == null) {  // add first element to the list
-            
+            cur = newNode;
+            cur.link = cur; // NOTE ???
+            prev = cur;
         } else {           // add element after current to existing list
-            
+            // move pointers
+            newNode.link = cur.link;
+            cur.link = newNode;
+            // update nodes
+            prev = cur;
+            cur = newNode;
         }
         
         // increment size of the list
+        size ++;
 
     }
     
@@ -61,9 +82,13 @@ public class CircularlyLinkedList<T> {
     public T getCurrent() throws CircularlyLinkedListException {
         
         // todo
+        // empty list
+        if (cur == null) {
+            throw new CircularlyLinkedListException
+                    ("Attempting to get element from an empty list.");
+        }
 
-        // this is a stub - so that we can compile during the test phase
-        return null;
+        return cur.data;
     }
     
     /**
@@ -75,6 +100,23 @@ public class CircularlyLinkedList<T> {
     public void advance(int n) throws CircularlyLinkedListException {
         
         // todo
+        // invalid n
+        if (n <= 0 || n == size){
+            throw new CircularlyLinkedListException("Invalid n");
+        }
+
+        // empty list
+        if (cur == null) {
+            throw new CircularlyLinkedListException
+                    ("Attempting to advance in an empty list.");
+        } else {
+            // not empty, iterate repeatedly
+            for (int i = 0; i < n; i++) {
+                prev = cur;
+                cur = cur.link;
+            }
+        }
+
 
     }
     
@@ -102,7 +144,7 @@ public class CircularlyLinkedList<T> {
         
         // todo
 
-        // this is a stub - so that we can compile during the test phase
+
         return null;
     }
     

@@ -4,9 +4,15 @@ import junit.framework.TestCase;
 import java.util.*;
 
 /**
- * A JUnit test case class.
- * Every method starting with the word "test" will be called when running
- * the test with JUnit.
+ * Description:
+ *      A JUnit test case class.
+ *      Every method starting with the word "test" will be called when running
+ *      the test with JUnit.
+ *
+ * @author mkz
+ * TASK: Add a test method in JosephusTest that
+ *      plays the game with the people sitting near you.
+ *      Who has to start the counting for YOU to win?
  */
 public class JosephusTest extends TestCase {
     

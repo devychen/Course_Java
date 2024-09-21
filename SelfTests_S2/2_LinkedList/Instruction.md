@@ -19,9 +19,9 @@ Fill in the missing parts of the **CircularlyLinkedList** class.
 Use the junit tests provided to ensure that your methods work as they should.
 
 ### Step4:
-Add the following files to your project:
+Add the following files to your project:  
 **Josephus.java**  
-**JosephusTest.java**
+**JosephusTest.java**  
 Write the play method in the Josephus class.
 Add a test method in **JosephusTest** that plays the game with the people sitting near you.
 Who has to start the counting for YOU to win?

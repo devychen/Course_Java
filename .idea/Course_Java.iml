@@ -36,6 +36,9 @@
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab10_Inheritance" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab11_Exception" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab8_Array" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab3" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab4" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

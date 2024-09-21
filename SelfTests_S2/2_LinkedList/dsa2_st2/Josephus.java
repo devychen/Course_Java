@@ -1,10 +1,14 @@
 package dsa2_st2;
 
 /**
-   A class to simulate the Josephus problem with a list
-   of names read from an input file.  Play the game by choosing
-   a player to start the counting and the winner will be printed.
-*/
+ * Description:
+ * A class to simulate the Josephus problem with a list
+ *    of names read from an input file.  Play the game by choosing
+ *    a player to start the counting and the winner will be printed.
+ *
+ * @author mkz
+ * TASK: Complete the play method
+ */
 import java.util.*;
 import java.io.*;
 public class Josephus {
