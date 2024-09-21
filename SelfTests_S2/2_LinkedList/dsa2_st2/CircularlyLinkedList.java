@@ -122,30 +122,66 @@ public class CircularlyLinkedList<T> {
     
     /**
      *  Advance to element in this list, testing for equality
-     *  using the equals method.  After this call, the node
-     *  containing element is current.
+     *  using the `equals` method.
+     *  After this call, the node containing element is current.
      *  @param element the element to advance to
      *  @throws CircularlyLinkedListException if the element is not in the list.
      */
     public void advance(T element) throws CircularlyLinkedListException {
         
         // todo
+        // empty list
+        if (cur == null) {
+            throw new CircularlyLinkedListException("Attempting to advance in an empty list.");
+        } else {
+            // not empty, compare and update, and advance
+            for (int i = 0; i < size; i++) {
+                if (cur.data.equals(element)) {
+                    return;
+                } else {
+                    prev = cur;
+                    cur = cur.link;
+                }
+            }
+            // throw exception if not found eventually
+            throw new CircularlyLinkedListException
+                    ("Element not found.");
+        }
 
     }
     
     /**
-     *  Remove the current node in this list and return the element
-     *  removed.  After this call, current is the element after the
-     *  removed element.
+     *  Remove the current node in this list and return the element removed.
+     *  After this call, current is the element after the removed element.
      *  @return the deleted element
      *  @throws CircularlyLinkedListException if the list is empty
      */
     public T remove() throws CircularlyLinkedListException {
-        
+
+        T element = null;
+
         // todo
+        // remove from empty list
+        if (cur == null) {
+            throw new CircularlyLinkedListException
+                    ("Attempting to remove from an empty list.");
+        }
+        // remove one-node list
+        if (size == 1){
+            element = cur.data;
+            cur = null;
+            prev = null;
+        } else {
+            // more than one element
+            element = cur.data;
+            cur = cur.link;
+            prev.link = cur;
+        }
+        // decrement size
+        size --;
 
+        return element;
 
-        return null;
     }
     
     /**

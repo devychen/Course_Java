@@ -26,8 +26,6 @@
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/8_arrays" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/9_inheritance" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S1/MockPaper" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab1" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab1/lab1/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab1_ArrayList/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S2/1_ArrayList" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S2/2_LinkedList" isTestSource="false" />
@@ -36,9 +34,11 @@
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab10_Inheritance" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab11_Exception" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab8_Array" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab2" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab3" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab4" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab1_ArrayList" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab1_ArrayList/lab1/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab2_LinkedList" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab3_StacknQueue" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab4_Recursion" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

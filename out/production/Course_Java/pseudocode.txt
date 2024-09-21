@@ -1,0 +1,6 @@
+ex1. pseudocode
+
+
+case 1. check if input xml is null or empty, return false.
+
+case 2.
