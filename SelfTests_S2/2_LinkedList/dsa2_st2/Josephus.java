@@ -55,7 +55,7 @@ public class Josephus {
 
         //try {
 
-         /****************  To Do  *************/
+         // todo
            
         //}
         //catch (CircularlyLinkedListException e) {
