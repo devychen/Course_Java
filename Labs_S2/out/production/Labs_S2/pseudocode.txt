@@ -1,0 +1,16 @@
+ex1. pseudocode
+
+
+case 1. wrong if input xml is null or empty
+
+case 2. wrong if the xml string not start with "<" or end with ">",
+or other strange beginning/ending
+
+the general case:
+- let's read from the beginning;
+- detect the begin-tag by locating "<" and ">", add to stack as the element "begin-tag";
+- keep reading, until find the next pair of "<" and ">";
+- if shortly follow "<" is /, then this could be the end-tag;
+- add to stack as the end element.
+Compare if the content of begin-tag = end-tag, case-sensitive;
+-

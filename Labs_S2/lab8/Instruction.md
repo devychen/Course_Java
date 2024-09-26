@@ -1,8 +1,4 @@
 # Lab 8
-The deadline is **16:00 on Friday, 21 June**. Submissions later than this time will be 
-ignored. Be sure to push your commits before the deadline.
-
-
 ## Exercise 1
 
 Please complete the missing code in the `BinaryTree` class. You will also need `BinaryTreeNode`.

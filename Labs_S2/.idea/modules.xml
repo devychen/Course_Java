@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Labs_S2.iml" filepath="$PROJECT_DIR$/Labs_S2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab5_Recursion/lab5_Recursion.iml" filepath="$PROJECT_DIR$/lab5_Recursion/lab5_Recursion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab6_Swing/lab6_Swing.iml" filepath="$PROJECT_DIR$/lab6_Swing/lab6_Swing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab8_BinaryTree/lab8_BinaryTree.iml" filepath="$PROJECT_DIR$/lab8_BinaryTree/lab8_BinaryTree.iml" />
+    </modules>
+  </component>
+</project>
