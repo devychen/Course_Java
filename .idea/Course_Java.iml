@@ -44,6 +44,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab7_Java8" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab8_BinaryTree" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab9_HashMap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S2/4_Recursion_Filename" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/SelfTests_S2/5_Recursion" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/Labs_S2/lab7_Java8/resources" />
     </content>
     <orderEntry type="inheritedJdk" />

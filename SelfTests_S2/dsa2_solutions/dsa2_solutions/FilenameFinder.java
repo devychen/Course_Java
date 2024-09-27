@@ -1,4 +1,4 @@
-package de.uni.tuebingen.sfs.java2;
+package dsa2_solutions;
 
 import java.io.File;
 import java.util.ArrayList;
