@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.event.*;
 import javax.swing.BoxLayout;
 import java.awt.Dimension;
+import java.io.*;
 import javax.swing.JOptionPane;
 import javax.swing.event.*;
 
@@ -80,15 +81,38 @@ public class TestFrame10 {
         quitButton.setMaximumSize(size);
         quitButton.addActionListener(new QuitButtonHandler());
 
+        // todo - set up the buttons
+        JButton editButton = new JButton("Edit");
+        editButton.setMaximumSize(size);
+        editButton.addActionListener(new EditButtonHandler());
+
+        JButton loadButton = new JButton("Load");
+        loadButton.setMaximumSize(size);
+        loadButton.addActionListener(new LoadButtonHandler());
+
+        JButton saveButton = new JButton("Save");
+        saveButton.setMaximumSize(size);
+        saveButton.addActionListener(new SaveButtonHandler());
+
+
         JPanel panel2 = new JPanel();
         panel2.add(Box.createRigidArea(new Dimension(0, 5)));
         panel2.add(addButton);
         panel2.add(Box.createRigidArea(new Dimension(0, 15)));
         panel2.add(rmButton);
         panel2.add(Box.createRigidArea(new Dimension(0, 5)));
+        // todo - add to panel, but before "quit" button
+        panel2.add(editButton);
+        panel2.add(Box.createRigidArea(new Dimension(0,5)));
+        panel2.add(loadButton);
+        panel2.add(Box.createRigidArea(new Dimension(0,5)));
+        panel2.add(saveButton);
+        panel2.add(Box.createRigidArea(new Dimension(0,5)));
+        // todo ends.
         panel2.add(quitButton);
         panel2.add(Box.createVerticalGlue());
         panel2.setLayout(new BoxLayout(panel2, BoxLayout.Y_AXIS));
+
 
         frame.getContentPane().setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.X_AXIS));
         frame.getContentPane().add(panel1);
@@ -127,14 +151,14 @@ public class TestFrame10 {
     private class RMButtonHandler implements ActionListener {
 
         public void actionPerformed(ActionEvent e) {
-            int elementIndex = aList.getSelectedIndex();
+            int elementIndex = aList.getSelectedIndex(); // NOTE: get the index of item selected
             if (elementIndex != -1) {
                 if (JOptionPane.showConfirmDialog(frame, "Really delete element??")
                         == JOptionPane.YES_OPTION) {
                     DefaultListModel<String> aListModel = (DefaultListModel<String>) aList.getModel();
                     aListModel.remove(elementIndex);
                 }
-            }
+            } else return;                             //   NOTE: return if nothing selected
         }
     }
 
@@ -145,10 +169,82 @@ public class TestFrame10 {
         }
     }
 
+    // todo - add action listeners accordingly
+    /**
+     * When you click on the button, a JOptionPane.showInputDialog() must appear
+     *  where you can edit the selected word.
+     *  When you click OK, the edited word should replace the old word in the list.
+     */
+    private class EditButtonHandler implements ActionListener {
+
+        public void actionPerformed(ActionEvent e) {
+            int elementIndex = aList.getSelectedIndex();
+            if (elementIndex != -1) {
+                String currentValue = aList.getSelectedValue();
+                String newValue = JOptionPane.showInputDialog(frame,
+                        "Edit the word:", currentValue);
+                if (newValue != null) {
+                    DefaultListModel<String> aListModel = (DefaultListModel<String>) aList.getModel();
+                    aListModel.set(elementIndex, newValue);
+                }
+            } else {
+                JOptionPane.showMessageDialog(frame, "Please select an item to edit.");
+            }
+        }
+    }
+
+    /**
+     * When you click on the button, a JOptionPane.showInputDialog() must appear
+     *  where you can enter a filename.
+     *  Then you must open the file and load the contents of the file into the JList.
+     *  This should not replace the words currently in the list.
+     *  Please check for errors, and inform the user if something went wrong.
+     */
+    private class LoadButtonHandler implements ActionListener {
+
+        public void actionPerformed(ActionEvent e){
+            String filename = JOptionPane.showInputDialog(frame, "Enter filename to load:");
+            if (filename != null && !filename.trim().isEmpty()) {
+                try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+                    DefaultListModel<String> aListModel = (DefaultListModel<String>) aList.getModel();
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        aListModel.addElement(line);
+                    }
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(frame, "Error loading file: " + ex.getMessage());
+                }
+            }
+        }
+    }
+
+    /**
+     * When you click on the button, a JOptionPane.showInputDialog() must appear
+     *  where you can enter a filename.
+     *  Then you must save the contents of the JList to the file.
+     *  Please check for errors, and inform the user if something went wrong.
+     */
+    private class SaveButtonHandler implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            String filename = JOptionPane.showInputDialog(frame, "Enter filename to save:");
+            if (filename != null && !filename.trim().isEmpty()) {
+                try (PrintWriter writer = new PrintWriter(new FileWriter(filename))) {
+                    DefaultListModel<String> aListModel = (DefaultListModel<String>) aList.getModel();
+                    for (int i = 0; i < aListModel.getSize(); i++) {
+                        writer.println(aListModel.getElementAt(i));
+                    }
+                } catch (IOException ex) {
+                    JOptionPane.showMessageDialog(frame, "Error saving file: " + ex.getMessage());
+                }
+            }
+        }
+    }
+
     private class ValueReporter implements ListSelectionListener {
 
         public void valueChanged(ListSelectionEvent event) { }
     }
+
 
     /**
      * Our window listener terminates the program when the close window button
@@ -168,3 +264,4 @@ public class TestFrame10 {
         new TestFrame10();
     }
 }
+
