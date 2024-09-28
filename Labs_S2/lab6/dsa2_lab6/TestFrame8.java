@@ -1,12 +1,22 @@
+package dsa2_lab6;
+
 import javax.swing.*;
 import java.awt.event.*;
 import javax.swing.BoxLayout;
 import java.awt.Dimension;
 import javax.swing.JOptionPane;
 
+/**
+ * TASK: change the program so that
+ *  it keeps running until the last window is closed.
+ *  Currently, if close one window, the whole program exits.
+ * @author mkz
+ */
+
 public class TestFrame8
 {
     private JFrame frame; // Our top level window
+    private int numOpenWindows; // todo
 
     /**
      * Constructor for TestFrame8
@@ -21,7 +31,6 @@ public class TestFrame8
         //Override JFrames default layout manager.
         BoxLayout aBoxLayout = new BoxLayout(frame.getContentPane(),BoxLayout.Y_AXIS);
         frame.getContentPane().setLayout(aBoxLayout);
-
 
         //This is the common size of the buttons
         Dimension size = new Dimension(80,30);
@@ -68,6 +77,10 @@ public class TestFrame8
         frame.addWindowListener(new MyWindowListener());
 
         frame.setVisible( true );
+
+        // todo
+        //  increment num of open windows
+        numOpenWindows++;
     }
 
     /*
@@ -106,8 +119,6 @@ public class TestFrame8
     }
 
 
-
-
     /**
      * Our window listener terminates the program when the close window button
      * is clicked.
@@ -115,7 +126,10 @@ public class TestFrame8
     private class MyWindowListener extends WindowAdapter {
         public void windowClosing(WindowEvent e)
         {
-            System.exit(0);
+            // todo
+            numOpenWindows--;
+            if (numOpenWindows == 0) System.exit(0);
+            else frame.dispose();
         }
     }
 

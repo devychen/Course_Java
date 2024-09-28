@@ -1,3 +1,4 @@
+package dsa2_lab6;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -5,6 +6,12 @@ import javax.swing.BoxLayout;
 import java.awt.Dimension;
 import javax.swing.JOptionPane;
 import javax.swing.event.*;
+
+/**
+ * TASK: Modify TestFrame10.java by
+ *  adding an "Edit", "Load" and "Save" button above the "Quit" button.
+ * @author mkz
+ */
 
 public class TestFrame10 {
 
