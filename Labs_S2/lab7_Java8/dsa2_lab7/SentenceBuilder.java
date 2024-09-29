@@ -1,12 +1,18 @@
 package dsa2_lab7;
+
 /**
- * A class that builds Word lists from the sentences in a TuBa export file.
- * The name of the export file is given as a parameter to the constructor.
- * Successive calls to the next method read the next sentence from the file
- * and return the ArrayList of Word objects.  The hasNext method determines
- * if there are more sentences in the export file.
+ * Description:
+ *  A class that builds Word lists from the sentences in a TuBa export file.
+ *  The name of the export file is given as a parameter to the constructor.
+ *  Successive calls to the next method read the next sentence from the file
+ *  and return the ArrayList of Word objects.  The hasNext method determines
+ *  if there are more sentences in the export file.
  * @author Marie Hinrichs
+ * 
+ * Task:
+ * @author mkz
  */
+
 import java.util.*;
 import java.io.*;
 

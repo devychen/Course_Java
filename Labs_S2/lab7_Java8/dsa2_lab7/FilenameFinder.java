@@ -1,7 +1,15 @@
 package dsa2_lab7;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
+/**
+ * @author mkz
+ * Task: Instead of using `equals()` to decide when a file name matches the parameter {entryName},
+ *      Please rewrite your FilenameFinder and use a Predicate as a criteria for file name selection. 
+ *      You can use ur previous FilenameFinder or the below codes provided.
+ */
 
 public class FilenameFinder {
     /**
