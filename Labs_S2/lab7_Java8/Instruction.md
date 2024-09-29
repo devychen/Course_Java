@@ -4,33 +4,6 @@
 - [the Java Stream API](http://tutorials.jenkov.com/java-functional-programming/streams.html)
 - **the corresponding lecture on java 8 features**
 
-**The deadline is at 16:00 on Friday, June 14.**
-
-### General Reminders
-- watch the [home repository](https://github.com/ISCL-Java2-SoSe24/home) (little eye icon on the top)
-- add the honor code to every file you upload
-- comment your code
-- you can ask questions on the [issues page](https://github.com/ISCL-Java2-SoSe24/home/issues) or come to the lab session on Friday
-- late submissions will not be graded
-- not compiling labs will get 0%
-
-### Honor Code
-```
-/**
- * Course:      Data Structures and Algorithms for Computational Linguistics II SoSe24
- * Assignment:  (lab, exercise)
- * Author:      (Your Name)
- * Description: (What does the program do?)
- *
- * Honor Code:  I pledge that this program represents my own work.
- *  I received help from:
- *   (enter the names of others that helped with the assignment, or
- *   no one if you received no help)
- *  in designing and debugging my program.
- */
- 
-```
-
 ## Exercise 1: Lambda expressions - filename finder using properties
 
 In the current version of your `FilenameFinder`, you used `equals()` to decide when a file name matches the parameter `entryName`. Please rewrite your `FilenameFinder` and use a 
