@@ -8,7 +8,9 @@ import java.util.stream.Collectors;
  * The class provides timer methods to compare the runtime of a Stream and a
  * loop search of a corpus.
  *
- * @author saile
+ * @author saile (source code)
+ * @author mkz
+ * Task: complete the 2 protected methods `searchWithStreams` & `searchWithLoop`
  */
 public class StreamTimer {
 
@@ -25,7 +27,7 @@ public class StreamTimer {
     }
 
     /**
-     * Create a StreamTimer from from a Negra export file in {@code filename}
+     * Create a StreamTimer from a Negra export file in {@code filename}
      *
      * @param fileName Path to NEGRA export file
      * @throws FileNotFoundException When export file is not found.
@@ -85,18 +87,66 @@ public class StreamTimer {
     }
 
     /*
-     Search word form {@code needle} in corpus. Return a list of Words matching needle.
+     Search word form {@code needle} in corpus. 
+     Return a list of Words matching needle.
      */
     protected List<Word> searchWithStreams(String needle) {
-        /* Your code */
+        // todo
+        return corpus.stream()
+                    .flatMap(ArrayList::stream)
+                    .filter(needle) //.filter(w -> w.getForm().equals(needle))
+                    .collect(Collectors.toList());
     }
 
 
     /*
-     Search word form {@code needle} in corpus. Return a list of tags of word from. Stream must use loops.
+     Search word form {@code needle} in corpus. 
+     Return a list of tags of word from. Stream must use loops.
      */
     protected List<String> searchWithLoop(String needle) {
-        /* Your code */
+        // todo
+        List<String> wl = new ArrayList<String>();
+
+        for (Word w: corpus){
+            if (w.getForm().equals(needle)){
+                wl.add(w.getTag());
+            }
+        }
+
+        return wl;
+        
+    }
+
+    /*
+     a driver program which runs
+     getTimeStreams() and getTimeLoops() 1 and 1000 times 
+     and searches for "AWO". 
+     Print the runtime and wonder...
+     */
+    public static void main(String[] args) {
+        StreamTimer time = new StreamTimer();
+        Sring wordToSearch = "AWO";
+
+        long streamTime1 = time.getTimeStreams(wordToSearch, 1);
+        long streamTime1000 = time.getTimeStreams(wordToSearch, 1000); 
+        long loopTime1 = time.getTimeLoops(wordToSearch, 1);
+        long loopTime1000 = time.getTimeLoops(wordToSearch, 1000);
+
+        //  Create booleans for comparisons
+        boolean isStreamFaster1 = timeStream1 < timeLoop1;
+        boolean isStreamFaster1000 = timeStream1000 < timeLoop1000;
+        if (isStreamFaster1){
+            System.out.println("Stream is faster (1 repetition).");
+        } else {
+            System.out.println("Loop is faster (1 reprtition).");
+        }
+
+        if (isStreamFaster1000){
+            System.out.println("Stream is faster (1000 repetition).");
+        } else {
+            System.out.println("Loop is faster (1000 reprtition).");
+        }
+        
     }
 
 }

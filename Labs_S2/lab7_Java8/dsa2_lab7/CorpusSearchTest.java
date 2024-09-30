@@ -34,7 +34,7 @@ public class CorpusSearchTest {
         //     public boolean test(Word word){
         //         return word.getForm().equals("in");
         //     }  
-        // };
+        // }
         assertEquals(2, corpusSearch.search(needle).size());
     }
 
@@ -48,9 +48,9 @@ public class CorpusSearchTest {
             @Override
             public boolean test(Word word){
                 return word.getTag().equals("APPR") &&
-                        word.getForm().equals("für")   
+                        word.getForm().equals("für") ;  
             }
-        };
+        }
 
          */
     }
