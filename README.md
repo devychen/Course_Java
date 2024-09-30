@@ -74,3 +74,4 @@
 
 ### Functional Interface
 函数式接口（Functional Interface）。函数式接口是指只包含一个抽象方法的接口。
+A Functional Interface is an Interface which allows only one Abstract method within the Interface scope
