@@ -75,3 +75,8 @@
 ### Functional Interface
 函数式接口（Functional Interface）。函数式接口是指只包含一个抽象方法的接口。
 A Functional Interface is an Interface which allows only one Abstract method within the Interface scope
+
+### Predicate<String>
+Predicate 看起来抽象，是因为它是一个“行为的抽象”——它描述了一种行为（即判断某个条件是否成立），而不像 ArrayList 那样是一个实际的数据结构。  
+你可以认为 Predicate 提供了一种“规则”，而不是“存储数据”的地方。这种抽象使得它非常灵活，可以应用在各种情况下进行条件判断，比如过滤集合、校验输入值等。  
+理解 Predicate 的关键是把它看作一个逻辑判断的“模板”或“过滤器”，而不是一个数据容器。
