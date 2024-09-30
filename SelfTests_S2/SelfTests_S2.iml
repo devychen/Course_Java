@@ -8,6 +8,12 @@
       <sourceFolder url="file://$MODULE_DIR$/3_StacknQueues" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/4_Recursion_Filename" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/5_Recursion" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/10_Hashing" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/11_XML" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/6_OpenNLP" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/7_Swing" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/8_Java8" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/9_BinaryTree" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
