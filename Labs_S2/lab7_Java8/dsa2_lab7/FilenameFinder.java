@@ -13,16 +13,19 @@ import java.util.function.Predicate; // added
  */
 
 public class FilenameFinder {
+
+    // todo: Change to Predicate interface
+    
     /**
      * Collect file or directory names equal to {@code entryName} and 
      * store the absolute pathname to the found entry in a List. 
      * Start the collection at path {@code path}. 
      * If {@code path} is a directory continue collection in its sub directories.
+     * 
      * @param entryName Name to search for
      * @param path root of search
      * @return List with found items or empty list if nothing was found.
      */
-    // todo: Change to Predicate interface
     public static List<String> findEntryAtPath(String path, Predicate<String> entryName) {
         List<String> entryList = new ArrayList<>();
 
@@ -35,6 +38,7 @@ public class FilenameFinder {
     }
 
     // todo: replace `equals()` with Predicate
+
     private static void realFind(List<String> entryList, Predicate<String> entryName, File fileOrDir) {
         // If name matches add absolute path to list
         if (fileOrDir.isFile()){
