@@ -56,7 +56,7 @@
     - 当您希望在子类中调用父类的方法（而非构造方法），例如当子类重写了一个方法，但在重写的过程中还需要使用父类的逻辑时，您会使用 `super.某个method`。
     - 例如，如果 `Patient` 类重写了 `setName`，但希望在新的逻辑中仍然使用 `Person` 类的 `setName` 方法，可以使用 `super.setName(aName)`。
 
-### 为什么不能用 `super.setName(aName)` 替代 `super(aName)`？
+##### 为什么不能用 `super.setName(aName)` 替代 `super(aName)`？
 
 - **`super(aName)` 是调用构造方法**：这是在初始化对象的时候进行的操作，是在对象创建之初，调用父类构造函数以正确地设置或初始化父类的成员变量。
 
