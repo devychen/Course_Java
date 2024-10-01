@@ -83,7 +83,8 @@ public class CorpusBuilder {
                     String[] sTokens = tokenizer.tokenize(s);
 
                     /*
-                    The OpenNLP tokenizer has problems with double quotes. Sometimes the quotes are not recognized as
+                    The OpenNLP tokenizer has problems with double quotes. 
+                    Sometimes the quotes are not recognized as
                     separate tokens.
                      */
                     ArrayList<String> tokenList = new ArrayList<>();
