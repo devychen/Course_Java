@@ -89,3 +89,45 @@ A Functional Interface is an Interface which allows only one Abstract method wit
    - for-each 循环适用于按顺序遍历的集合，而 Iterator 则不受限于此，可以适用于无序的 Set 或 Map。
 - 更复杂的遍历逻辑时：
    - 如果在遍历中，你需要同时进行多种操作，如动态地添加、删除、替换元素，那么 Iterator 会比其他遍历方式更好控制。
+ 
+```java
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class IteratorComparison {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Cherry");
+
+        // 1. 使用for循环
+        System.out.println("Using for loop:");
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+
+        // 2. 使用增强型for-each循环
+        System.out.println("\nUsing enhanced for-each loop:");
+        for (String fruit : list) {
+            System.out.println(fruit);
+        }
+
+        // 3. 使用Iterator进行遍历和删除元素
+        System.out.println("\nUsing Iterator (with removal operation):");
+        Iterator<String> iter = list.iterator();
+        while (iter.hasNext()) {
+            String fruit = iter.next();
+            if (fruit.equals("Banana")) {
+                iter.remove();  // 删除当前遍历到的元素
+            } else {
+                System.out.println(fruit);
+            }
+        }
+
+        // 输出修改后的集合
+        System.out.println("\nAfter removing 'Banana', the final list is: " + list);
+    }
+}
+
+```
