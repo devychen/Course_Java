@@ -80,3 +80,54 @@ A Functional Interface is an Interface which allows only one Abstract method wit
 - 你可以认为 Predicate 提供了一种“规则”，而不是“存储数据”的地方。这种抽象使得它非常灵活，可以应用在各种情况下进行条件判断，比如过滤集合、校验输入值等。  
 - 理解 Predicate 的关键是把它看作一个逻辑判断的“模板”或“过滤器”，而不是一个数据容器。
 - `Predicate<String> nameMatch = s -> s.equals("snook.moo");` 这句代码可以用自然语言描述为：“创建了一个名为 nameMatch 的 Predicate 对象，它用于检查某个字符串是否等于 "snook.moo"。”
+
+### Iterator
+什么时候使用 Iterator？
+- 需要在遍历中删除或修改元素时：
+   - 如果你需要在遍历集合时进行删除操作（例如删除所有满足某个条件的元素），使用 Iterator 是最合适的。
+- 集合类型是 Set 或其他无序集合时：
+   - for-each 循环适用于按顺序遍历的集合，而 Iterator 则不受限于此，可以适用于无序的 Set 或 Map。
+- 更复杂的遍历逻辑时：
+   - 如果在遍历中，你需要同时进行多种操作，如动态地添加、删除、替换元素，那么 Iterator 会比其他遍历方式更好控制。
+ 
+```java
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class IteratorComparison {
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Apple");
+        list.add("Banana");
+        list.add("Cherry");
+
+        // 1. 使用for循环
+        System.out.println("Using for loop:");
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+
+        // 2. 使用增强型for-each循环
+        System.out.println("\nUsing enhanced for-each loop:");
+        for (String fruit : list) {
+            System.out.println(fruit);
+        }
+
+        // 3. 使用Iterator进行遍历和删除元素
+        System.out.println("\nUsing Iterator (with removal operation):");
+        Iterator<String> iter = list.iterator();
+        while (iter.hasNext()) {
+            String fruit = iter.next();
+            if (fruit.equals("Banana")) {
+                iter.remove();  // 删除当前遍历到的元素
+            } else {
+                System.out.println(fruit);
+            }
+        }
+
+        // 输出修改后的集合
+        System.out.println("\nAfter removing 'Banana', the final list is: " + list);
+    }
+}
+
+```
