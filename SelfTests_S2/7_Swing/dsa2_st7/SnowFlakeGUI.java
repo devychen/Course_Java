@@ -7,7 +7,9 @@ import javax.swing.*;
  * SnowFlakeGUI. A GUI to display snow flakes. It offers multiple ways to set
  * the flakes' parameters such as size, number, background and flake color.
  *
- * @author veit
+ * @author veit (source codes)
+ * @author mkz
+ * 
  */
 @SuppressWarnings("serial")
 public class SnowFlakeGUI extends JFrame {
@@ -18,6 +20,8 @@ public class SnowFlakeGUI extends JFrame {
     private JTextField minBeamLength, maxBeamLength;
     private JComboBox numFlakes;
     private JRadioButton randomColor, fixedColor;
+    private JLable redLabel, greenLabel, blueLabel;
+    private JTextFiedl red, green, blue;
 
     /**
      * Default constructor.
@@ -80,8 +84,6 @@ public class SnowFlakeGUI extends JFrame {
         numFlakes.setMaximumSize(textFieldDim);
         //numFlakes.setEditable(true);    // this allows you to pick a number freely beyond the given selection
 
-
-
         // add the components to the panel. Use flexible (Glue) and fix (Strut) fillers.
         westPanel.add(Box.createVerticalGlue());
 
@@ -134,6 +136,26 @@ public class SnowFlakeGUI extends JFrame {
 
 
         //TODO setup labels and text fields to enter r, g and b value for a fixed color
+        redLabel = new JLabel("<html>Red<html>");
+        red = new JTextField(0);
+        red.setPreferredSize(textFieldDim);
+        red.setMaximumSize(textFieldDim);
+        red.setText("0");
+        red.setToolTipText("Enter Integer from 0 - 255!");
+
+        greenLabel = new JLabel("<html>Red<html>");
+        green = new JTextField(0);
+        green.setPreferredSize(textFieldDim);
+        green.setMaximumSize(textFieldDim);
+        green.setText("0");
+        green.setToolTipText("Enter Integer from 0 - 255!");
+
+        blueLabel = new JLabel("<html>Red<html>");
+        blue = new JTextField(0);
+        blue.setPreferredSize(textFieldDim);
+        blue.setMaximumSize(textFieldDim);
+        blue.setText("0");
+        blue.setToolTipText("Enter Integer from 0 - 255!");
 
 
         // add components to the panel.
@@ -144,9 +166,21 @@ public class SnowFlakeGUI extends JFrame {
 
 
         //TODO add those labels and text fields to the panel
+        eastPanel.add(redLabel);
+        eastPanel.add(Box.createVerticalStrut(3));
+        eastPanel.add(red);
+        eastPanel.add(Box.createHorizontalStrut(15));
 
+        eastPanel.add(greenLabel);
+        eastPanel.add(Box.createVerticalStrut(3));
+        eastPanel.add(green);
+        eastPanel.add(Box.createHorizontalStrut(15));
 
-        eastPanel.add(Box.createVerticalGlue());
+        eastPanel.add(blueLabel);
+        eastPanel.add(Box.createVerticalStrut(3));
+        eastPanel.add(blue);
+        eastPanel.add(Box.createHorizontalStrut(15));
+        
 
         // finally add panel to the main layout
         getContentPane().add(eastPanel, BorderLayout.EAST);
@@ -237,6 +271,7 @@ public class SnowFlakeGUI extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             //TODO implement this method
+
         }
     }
 
@@ -252,7 +287,7 @@ public class SnowFlakeGUI extends JFrame {
     }
 
     /**
-     * Main method. Crate a SnowFlakeGui and show it on the screen.
+     * Main method. Create a SnowFlakeGui and show it on the screen.
      *
      * @param args
      */

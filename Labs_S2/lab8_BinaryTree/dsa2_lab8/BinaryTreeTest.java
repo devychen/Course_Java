@@ -13,9 +13,11 @@ public class BinaryTreeTest extends TestCase {
     protected void setUp()  {
         BinaryTree<String> d = new BinaryTree<String>("D");
         BinaryTree<String> e = new BinaryTree<String>("E");
-        BinaryTree<String> b = new BinaryTree<String>("B",d,e);
+        BinaryTree<String> b = new BinaryTree<String>
+                ("B",d,e);
         BinaryTree<String> c = new BinaryTree<String>("C");
-        BinaryTree<String> a = new BinaryTree<String>("A",b,c);
+        BinaryTree<String> a = new BinaryTree<String>
+                ("A",b,c);
         
         root = a;
     }
