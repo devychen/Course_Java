@@ -219,12 +219,12 @@ public class BinaryTree<T> {
 
     /*
      Order: D B E A C F
-     1. STACK [A,B,D] -> POP D(CUR=Null) -> RETURN D -> STACK[A,B]
+     1. STACK [A,B,D] -> POP D(CUR=null) -> RETURN D -> STACK[A,B]
      2.               -> POP B(CUR=E)    -> RETURN B -> STACK[A]
-     3. PUSH E        -> POP E(CUR=Null) -> RETURN E -> STACK[A]
+     3. PUSH E        -> POP E(CUR=null) -> RETURN E -> STACK[A]
      4.               -> POP A(CUR=C)    -> RETURN A -> STACK[]
      5. PUSH C        -> POP C(CUR=F)    -> RETURN C -> STACK[]
-     6. PUSH F        -> POP F(CUR=Null) -> RETURN C -> STACK[]
+     6. PUSH F        -> POP F(CUR=null) -> RETURN C -> STACK[]
      ITERATION ENDS.
      */
 
@@ -307,6 +307,21 @@ public class BinaryTree<T> {
 
         };
     }
+
+    /*
+    Order: D E B F C A
+    0. CUR=A  -> PUSH A,B,D(CUR=null)       -> STACK[A,B,D]
+    1. PEEK=D -> POP D -> LVN=D -> RETURN D -> STACK[A,B]
+    2. PEEK=B -> CUR=E -> PUSH E(CUR=null)  -> STACK[A,B,E]
+    3. PEEK=E -> POP E -> LVN=E -> RETURN E -> STACK[A,B]
+    4. PEEK=B -> POP B -> LVN=B -> RETURN B -> STACK[A]
+    5. PEEK=A -> CUR=C -> PUSH C(CUR=null)  -> STACK[A,C]
+    6. PEEK=C -> CUR=F -> PUSH F(Cur=null)  -> STACK[A,C,F]
+    7. PEEK=F -> POP F -> LVN=F -> RETURN F -> STACK[A,C]
+    8. PEEK=C -> POP C -> LVN=C -> RETURN C -> STACK[A]
+    9. PEEK=A -> POP A -> LVN=A -> RETURN A -> STACK[]
+     */
+
     /**
      * Creates an iterator which performs a post-order traversal on this binary tree.
      *
