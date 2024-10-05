@@ -7,14 +7,14 @@ import java.util.*;
 
 public class BinaryTree<T> implements java.io.Serializable {
     
-    private BinaryNode<T> root;
+    private BinaryNode<T> root; // 声明了引用变量root ...
     
     /**
      * Construct an empty binary tree.
      */
     public BinaryTree() {
-        
-        //**********     TO DO    **********
+        // todo
+        root = null;
         
     }
     
@@ -23,8 +23,10 @@ public class BinaryTree<T> implements java.io.Serializable {
      * @param rootData the root of the new tree
      */
     public BinaryTree(T rootData) {
-        
-        //**********     TO DO    **********
+        // todo
+        root = new BinaryNode<>(rootData);
+        // ...需要将其指向实际的BinaryNode对象
+
         
     }
     
@@ -39,7 +41,14 @@ public class BinaryTree<T> implements java.io.Serializable {
                       BinaryTree<T> rightTree) {
         
         
-        //**********     TO DO    **********
+        // todo
+        root = new BinaryNode<>(rootData);
+        if (leftTree != null) {
+            root.setLeftChild(leftTree.root);
+        }
+        if (rightTree != null) {
+            root.setRightChild(rightTree.root);
+        }
         
     }
     
@@ -149,9 +158,15 @@ public class BinaryTree<T> implements java.io.Serializable {
      * Helper mirror method.
      */
     private void mirror(BinaryNode<T> node) {
-        
+
+        if (node == null) return;
         //**********     TO DO    **********
-        
+        mirror(node.getLeftChild());
+        mirror(node.getRightChild());
+
+        BinaryNode<T> tmp = node.getLeftChild();
+        node.setLeftChild(node.getRightChild());
+        node.setRightChild(tmp);
     }
     
     /**
@@ -168,9 +183,23 @@ public class BinaryTree<T> implements java.io.Serializable {
      */
     private String toString(BinaryNode<T> top) {
         
-        //**********     TO DO    **********
-        
-        //stub
-        return "";
+        // todo
+        if (top == null){
+            return "";
+        }
+
+        StringBuilder sb = new StringBuilder();
+        if(top.isLeaf()){
+            sb.append(" " + top.getData());
+        } else {
+            sb.append(
+                    " [" + top.getData()
+                            + " " + toString(top.getLeftChild())
+                            + " " + toString(top.getRightChild())
+                            + "]");
+        }
+
+        return sb.toString().replace(" ]", "]");
+
     }
 }
