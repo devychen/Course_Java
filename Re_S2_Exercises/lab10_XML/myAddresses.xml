@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addressbook>
+	<address>
+		<forename>Homer</forename>
+		<surname>Simpson</surname>
+		<email>homer@simpsons.com</email>
+	</address>
+	<address>
+		<forename>Marge</forename>
+		<surname>Simpson</surname>
+		<email>marge@simpsons.com</email>
+	</address>
+	<address>
+		<forename>Bart</forename>
+		<surname>Simpson</surname>
+		<email>bart@simpsons.com</email>
+	</address>
+</addressbook>

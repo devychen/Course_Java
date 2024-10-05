@@ -1,8 +1,5 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/USsM_LT3)
 # Lab 10
 
-The deadline is **16:00 on Friday, July 5**. Submissions later than this time will be 
-ignored. Be sure to push your commits before the deadline.
 
 ## Exercise 1
 
@@ -18,7 +15,7 @@ ignored. Be sure to push your commits before the deadline.
 </addressbook>
 ```
 
-`Addressbook.java` contains code to load and save instances of class 
+`Addressbook.java` contains code to load and save instances of class   
 `Address.java` to files. Please complete the missing code. Use `AddressbookTest.java` to test your code. 
 
 Your methods **must** use the STAX API to read and write files. 
