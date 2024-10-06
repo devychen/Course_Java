@@ -131,3 +131,71 @@ public class IteratorComparison {
 }
 
 ```
+
+### `Comparable` Interface
+Comparable 接口在 Java 中用于定义对象的自然排序顺序。通过实现 Comparable 接口，类的实例可以与同类的其他实例进行比较，从而能够在排序时使用（例如，在 Collections.sort() 或 Arrays.sort() 中）。
+
+##### Comparable 的使用
+Comparable 接口中只有一个方法 compareTo(T o)，其定义如下：
+`int compareTo(T o);`
+返回值：
+如果当前对象小于 o，则返回负整数；
+如果当前对象等于 o，则返回零；
+如果当前对象大于 o，则返回正整数。
+##### 具体例子
+假设我们有一个 Student 类，希望按照学生的年龄对学生对象进行排序。我们可以通过实现 Comparable 接口并覆盖 compareTo 方法来定义排序规则。
+
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+class Student implements Comparable<Student> {
+    private String name;
+    private int age;
+
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // 实现 compareTo 方法，根据年龄排序
+    @Override
+    public int compareTo(Student other) {
+        return Integer.compare(this.age, other.age);
+    }
+
+    @Override
+    public String toString() {
+        return "Student{name='" + name + "', age=" + age + '}';
+    }
+
+    public static void main(String[] args) {
+        List<Student> students = new ArrayList<>();
+        students.add(new Student("Alice", 20));
+        students.add(new Student("Bob", 18));
+        students.add(new Student("Charlie", 22));
+
+        // 排序前
+        System.out.println("Before sorting: " + students);
+
+        // 对学生列表进行排序
+        Collections.sort(students);
+
+        // 排序后
+        System.out.println("After sorting: " + students);
+    }
+}
+```
+运行结果  
+Before sorting: [Student{name='Alice', age=20}, Student{name='Bob', age=18}, Student{name='Charlie', age=22}]
+After sorting: [Student{name='Bob', age=18}, Student{name='Alice', age=20}, Student{name='Charlie', age=22}]
+解释  
+在 Student 类中实现了 Comparable<Student> 接口，并重写了 compareTo 方法。  
+compareTo 方法中使用 Integer.compare(this.age, other.age) 进行比较：  
+如果 this.age < other.age，返回负数，表示当前学生比 other 学生小。  
+如果 this.age > other.age，返回正数，表示当前学生比 other 学生大。  
+如果 this.age == other.age，返回零，表示两者相等。  
+通过调用 Collections.sort(students)，能够按照年龄对 students 列表中的元素进行升序排序。最终排序结果显示，Bob（18岁）在最前，Charlie（22岁）在最后。  
+
+这种方式非常适合用于简单的排序需求，但如果需要多重排序条件（如先按年龄排序，再按姓名排序），可以考虑使用 Comparator 接口。
