@@ -200,11 +200,10 @@ public class SLinkedList<T> implements SimpleList<T> {
 	//     --- then implement the two methods
 	private class LinkedListIterator implements Iterator<T>
 	{
-		//add variable
+		// add variable
 		ListNode current;
 
-		//constructor
-
+		// constructor
 		/**
 		 * Performs the given action for each remaining element until
 		 * 	all elements have been processed or the action throws an exception.
@@ -213,8 +212,7 @@ public class SLinkedList<T> implements SimpleList<T> {
 			current = head;
 		}
 
-		//methods
-
+		// methods
 		/**
 		 * Returns true if the iteration has more elements.
 		 * @return
