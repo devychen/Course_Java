@@ -1,0 +1,4 @@
+AuthName "java"
+AuthType Basic
+AuthUserFile /home/saile/access.pw
+Require valid-user

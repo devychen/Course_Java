@@ -1,3 +1,5 @@
+package dsa2_lab8;
+
 /**
  * A class which represents a node in a binary tree
  */

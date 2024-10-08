@@ -30,7 +30,6 @@
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S2/1_ArrayList" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S2/2_LinkedList" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S2/3_StacknQueues" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/SlideExamples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab10_Inheritance" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab11_Exception" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S1/lab8_Array" isTestSource="false" />
@@ -47,8 +46,12 @@
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S2/4_Recursion_Filename" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab6" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab10_Extra" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Labs_S2/lab10_XML" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/SelfTests_S2/5_Recursion" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/Labs_S2/lab7_Java8/resources" />
+      <excludeFolder url="file://$MODULE_DIR$/S2_Exercises_All" />
+      <excludeFolder url="file://$MODULE_DIR$/SelfTests_S2/dsa2_solutions" />
+      <excludeFolder url="file://$MODULE_DIR$/SlideExamples" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

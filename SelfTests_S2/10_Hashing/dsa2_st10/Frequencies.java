@@ -1,5 +1,11 @@
 package dsa2_st10;
 
+/**
+ * @author mkz
+ * TASK:
+ * Ex1.
+ */
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
