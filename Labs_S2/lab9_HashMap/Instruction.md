@@ -1,9 +1,4 @@
 # Lab 9 - HashMap
-The deadline is **16:00 on Friday, June 28**. Submissions later than this time will be 
-ignored. Be sure to push your commits before the deadline.
-
-**Note**: This time you will have to create a new project from scratch, rather than from existing sources. If you forgot how to do that and are struggling, consult the IntelliJ intro from lab0.
-
 
 ### Penn Treebank Tag Set
 The file <a href="dict.dat">dict.dat</a> is a dictionary of words and their 
